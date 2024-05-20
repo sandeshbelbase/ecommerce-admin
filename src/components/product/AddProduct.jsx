@@ -373,7 +373,7 @@ export default function AddProduct() {
             <Grid item sm={4}>
               <CustomInput
                 type="number"
-                label="Price(Rs)"
+                label="Price(A$)"
                 control={control}
                 name="price"
               />
