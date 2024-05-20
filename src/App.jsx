@@ -11,7 +11,6 @@ import { Homepage } from "./components/homepage/HomePage";
 import { Layout } from "./components/layout/Layout";
 import AddProduct from "./components/product/AddProduct";
 import { Product } from "./components/product/Product";
-import { Transaction } from "./components/transaction/Transaction";
 
 const App = () => {
   const [allProduct, setAllProduct] = useState();
@@ -37,7 +36,7 @@ const App = () => {
             path="/"
             element={userState?.email ? <Layout /> : <Navigate to="/login" />}
           >
-            <Route path="homepage" element={<Homepage />}></Route>
+            <Route path="/" element={<Homepage />}></Route>
 
             {/* Product route */}
             <Route path="product" element={<Product />} />
@@ -51,8 +50,6 @@ const App = () => {
             <Route path="banners" element={<Banners />}></Route>
             <Route path="banners/:id" element={<AddBanner />}></Route>
             <Route path="banners/add" element={<AddBanner />}></Route>
-
-            <Route path="transaction" element={<Transaction />}></Route>
           </Route>
         </Routes>
       </ProductList.Provider>
